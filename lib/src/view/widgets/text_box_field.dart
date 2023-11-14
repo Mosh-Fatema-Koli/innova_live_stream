@@ -125,7 +125,7 @@ class SignUpTextField extends StatelessWidget {
           filled: true,
           alignLabelWithHint: true,
           suffixText: suffixText,
-          prefixIconColor: BrandColors.greyColor,
+          prefixIconColor: AppColors.greyColor,
           errorStyle: myStyle(12, Colors.red.withOpacity(0.9), FontWeight.w500),
           errorBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: Colors.pink, width: 1),
@@ -135,7 +135,7 @@ class SignUpTextField extends StatelessWidget {
           fillColor: Colors.white,
           focusedBorder: OutlineInputBorder(
             borderSide:
-                const BorderSide(color: BrandColors.lightGreyColor, width: 1),
+                const BorderSide(color: AppColors.lightGreyColor, width: 1),
             borderRadius: BorderRadius.circular(50),
           ),
           focusedErrorBorder: OutlineInputBorder(
@@ -218,7 +218,7 @@ class _TextboxWidgetState extends State<TextboxWidget> {
         },
         decoration: InputDecoration(
           errorStyle: myStyle(12, Colors.red.withOpacity(0.9), FontWeight.w500),
-          prefixIconColor: BrandColors.greyColor,
+          prefixIconColor: AppColors.greyColor,
           errorBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: Colors.pink, width: 1),
             borderRadius: BorderRadius.circular(50),

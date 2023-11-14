@@ -18,12 +18,12 @@ class GlobalButtons {
       child: Container(
         width: double.infinity,
         height: 50,
-        decoration: BoxDecoration(color: color ?? BrandColors.lightGreyColor),
+        decoration: BoxDecoration(color: color ?? AppColors.lightGreyColor),
         child: TextButton(
           style: ElevatedButton.styleFrom(
 
               elevation: 0.0,
-              shadowColor: BrandColors.lightGreyColor,
+              shadowColor: AppColors.lightGreyColor,
               foregroundColor: Colors.white),
           onPressed: press,
           child: Text(
@@ -59,10 +59,10 @@ class CartButtons {
       child: Container(
         width: double.infinity,
         height: 30,
-        decoration: BoxDecoration(color: color ?? BrandColors.lightGreyColor),
+        decoration: BoxDecoration(color: color ?? AppColors.lightGreyColor),
         child: TextButton(
           style: ElevatedButton.styleFrom(
-              backgroundColor:BrandColors.colorButton,
+              backgroundColor:AppColors.colorButton,
               elevation: 0.0,
               shadowColor: pinkColor,
               foregroundColor: Colors.white),

@@ -10,7 +10,7 @@ void showCustomSnackBar(String message, {bool isError = true, bool getXSnackBar 
   if(message != null && message.isNotEmpty) {
     if(getXSnackBar) {
       Get.showSnackbar(GetSnackBar(
-        backgroundColor: isError ? BrandColors.colorButton: Colors.green,
+        backgroundColor: isError ? AppColors.colorButton: Colors.green,
         message: message,
         duration: const Duration(seconds: 3),
         snackStyle: SnackStyle.FLOATING,
@@ -27,7 +27,7 @@ void showCustomSnackBar(String message, {bool isError = true, bool getXSnackBar 
           top:10.h, bottom:10.h, left:10.h,
         ),
         duration: const Duration(seconds: 3),
-        backgroundColor: isError ? BrandColors.colorButton: Colors.green,
+        backgroundColor: isError ? AppColors.colorButton: Colors.green,
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
         content: Center(child: KText(text: message,color: Colors.white,))

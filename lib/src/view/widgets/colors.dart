@@ -5,7 +5,7 @@ const String uri = "https://apihomechef.antopolis.xyz/api/admin/";
 
 //flutter run -d chrome --web-renderer htmlY
 
-class BrandColors {
+class AppColors {
 
   static const Color backgroundColor = Colors.white;
 
@@ -77,21 +77,21 @@ myStyle(double size, [Color? color, FontWeight? fw]) {
 myStyles14() {
   return GoogleFonts.roboto(
     fontSize: 14,
-    color: BrandColors.colorText,
+    color: AppColors.colorText,
   );
 }
 
 myStyles12() {
   return GoogleFonts.roboto(
     fontSize: 12,
-    color: BrandColors.colorText,
+    color: AppColors.colorText,
   );
 }
 
 myStyles16() {
   return GoogleFonts.roboto(
     fontSize: 16,
-    color: BrandColors.colorText,
+    color: AppColors.colorText,
     fontWeight: FontWeight.w400,
   );
 }
@@ -107,7 +107,7 @@ myStyles18() {
 myStyles20() {
   return GoogleFonts.roboto(
     fontSize: 20,
-    color: BrandColors.colorText,
+    color: AppColors.colorText,
     fontWeight: FontWeight.w700,
   );
 }

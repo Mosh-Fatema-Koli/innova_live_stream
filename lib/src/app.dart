@@ -1,40 +1,55 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:innova_live_streem/src/view/const/route/route.dart';
-import 'package:innova_live_streem/src/view/screen/Home/home_page.dart';
+import 'package:innova_live_streem/src/view/const/theme/app_theme.dart';
+import 'package:innova_live_streem/src/view/const/theme/controller/theme_controller.dart';
 import 'package:innova_live_streem/src/view/screen/Main_page/nav_bar.dart';
 
+
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  // This widget is the root of your application.
+
+  final _themeController=Get.put(ThemeController());
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      getPages: getPages,
-      home: BottomNaVBarPage(),
-      debugShowCheckedModeBanner: false,
+    _themeController.getCurrentAppTheme();
+    // _themeController.setDarkTheme(_themeController.isDarkTheme.value);
+    return  ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context , child) {
+        return Obx(()=>
+            GetMaterialApp(
+              debugShowCheckedModeBanner: false,
+              title: 'Ecommerce Project',
+              // You can use the library anywhere in the app even in theme
+
+              // theme: ThemeData(
+              //   scaffoldBackgroundColor: AppColors.bgColor,
+              //   fontFamily: "inter",
+              //     textTheme: Theme.of(context).textTheme.apply(bodyColor: Colors.blue,displayColor: Colors.red),
+              //     hintColor: Colors.red,
+              //   primarySwatch: Colors.blue,
+              //   appBarTheme: AppBarTheme(
+              //     backgroundColor: AppColors.bgColor,
+              //     elevation: 0
+              //   )
+              //
+              // ),
+              theme: Themes.themeData(_themeController.isDarkTheme.value, context),
+              getPages:getPages,
+              home: BottomNaVBarPage(),
+            ),
+        );
+      },
+
     );
   }
 }

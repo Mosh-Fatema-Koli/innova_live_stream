@@ -1,78 +1,33 @@
-//
-// import 'package:flutter/material.dart';
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
-//
-// class Themes{
-//
-//   static  ThemeData themeData(BuildContext context,bool isDarkMode)=>ThemeData(
-//       scaffoldBackgroundColor:!isDarkMode?AppColors.bgColor :AppColors.darkBgColor,
-//       primaryColor: AppColors.mainColor,
-// //  secondaryHeaderColor: Color(0xFF009f67),
-//       //   fontFamily: "Metropolis",
-//
-//       brightness: isDarkMode?Brightness.dark:Brightness.light,
-//       disabledColor:AppColors.greyColor,
-//       hintColor: AppColors.greyColor,
-//       dividerColor:isDarkMode?AppColors.borderColor.withOpacity(0.05):AppColors.borderColor,
-//       shadowColor:AppColors.shadowColor,
-//       canvasColor:isDarkMode?const Color(0xFF2c2c2c):Colors.white,
-//       cardColor:isDarkMode?AppColors.darkCardColor:AppColors.cardColor,
-//
-//       iconTheme: IconThemeData(
-//         color:isDarkMode?AppColors.darkIconColor:AppColors.iconColor,
-//       ),
-//
-//
-//       textTheme: Theme.of(context).textTheme.apply(
-//         bodyColor:!isDarkMode?AppColors.textColor:AppColors.darkTextColor,
-//         // displayColor: Colors.blue,
-//       ),
-//
-//       inputDecorationTheme: InputDecorationTheme(
-//         fillColor:isDarkMode?AppColors.darkFillColor:AppColors.fillColor,
-//         focusedBorder: OutlineInputBorder(
-//           borderRadius:
-//           BorderRadius.circular(5.r), // Adjust the border radius as needed
-//           borderSide: BorderSide(color:Colors.white.withOpacity(0.5)), // Remove the border
-//         ),
-//         enabledBorder: OutlineInputBorder(
-//           borderRadius:
-//           BorderRadius.circular(5.r), // Adjust the border radius as needed
-//           borderSide: BorderSide(color:Colors.white.withOpacity(0.1)), // Remove the border
-//         ),
-//         errorBorder:OutlineInputBorder(
-//           borderRadius:
-//           BorderRadius.circular(5.r), // Adjust the border radius as needed
-//           borderSide: const BorderSide(color:Colors.red), // Remove the border
-//         ),
-//         focusedErrorBorder: OutlineInputBorder(
-//           borderRadius:
-//           BorderRadius.circular(5.r), // Adjust the border radius as needed
-//           borderSide: const BorderSide(color: Colors.red), // Remove the border
-//         ),
-//       ),
-//
-//       appBarTheme: AppBarTheme(
-//         backgroundColor:!isDarkMode?AppColors.bgColor: AppColors.darkFillColor,
-//         iconTheme: IconThemeData(color:!isDarkMode?AppColors.iconColor:AppColors.darkIconColor,size:24.sp,),
-//         titleTextStyle: TextStyle(color:!isDarkMode?AppColors.textColor:AppColors.darkTextColor ),
-//         elevation:1,
-//         centerTitle: true,
-//       ),
-//
-//   );
-//
-//
-//   buildOutlineInputBorder(Color color) {
-//     return OutlineInputBorder(
-//       borderRadius:
-//       BorderRadius.circular(5.r), // Adjust the border radius as needed
-//       borderSide: BorderSide(color: color), // Remove the border
-//     );
-//   }
-//
-//
-// }
-//
-//
-//
+
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:innova_live_streem/src/view/widgets/colors.dart';
+
+class Themes{
+
+
+  static ThemeData themeData( bool isDarkTheme,BuildContext context){
+    return ThemeData(
+        // scaffoldBackgroundColor:isDarkTheme?AppColors.darkBgColor:AppColors.bgColor,// scaffold bg color change
+        // cardColor: isDarkTheme?AppColors.darkButtonColor:AppColors.bgColor,//  card color change
+        // canvasColor:isDarkTheme?AppColors.darkBgColor:AppColors.bgColor,// drawer color change
+        // fontFamily: "inter",
+        // secondaryHeaderColor: isDarkTheme?AppColors.darkButtonColor:AppColors.greyButtonColor ,
+        // dividerColor: AppColors.borderColor,
+        // iconTheme: IconThemeData(
+        //     color: isDarkTheme?AppColors.darkHeaderTextColor:AppColors.headerTextColor
+        // ),
+        // textTheme: Theme.of(context).textTheme.apply(bodyColor:isDarkTheme?AppColors.darkHeaderTextColor:AppColors.headerTextColor,displayColor: Colors.red),
+        //
+        // appBarTheme: AppBarTheme(
+        //     backgroundColor:isDarkTheme?AppColors.darkBgColor:AppColors.bgColor,
+        //     titleTextStyle:  CustomTextStyle.h3(fontWeight: FontWeight.w600,color:isDarkTheme?AppColors.darkHeaderTextColor:AppColors.headerTextColor),
+        //     elevation: 0
+        // )
+    );
+  }
+
+
+}
+
+
