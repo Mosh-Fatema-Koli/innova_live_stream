@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:innova_live_streem/src/view/const/route/route.dart';
 import 'package:innova_live_streem/src/view/screen/Home/home_page.dart';
+import 'package:innova_live_streem/src/view/screen/Main_page/nav_bar.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -8,7 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -29,7 +32,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      getPages: getPages,
+      home: BottomNaVBarPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
