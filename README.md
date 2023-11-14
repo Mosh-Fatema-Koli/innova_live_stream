@@ -1,4 +1,4 @@
-# innova_live_streem
+# innova_live_stream
 
 flutter_getx_live_stream project
 
